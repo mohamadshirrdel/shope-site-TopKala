@@ -1,30 +1,28 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <CHeader></CHeader>
+  <div class="nav-categories-overlay"></div>
+  <!-- end-header -->
+
+  <!-- content-site -->
+  <main>
+    <div class="main-container">
+      <router-view />
+    </div>
+  </main>
+  <!-- content-site -->
+
+  <!-- scroll-top -->
+  <div class="btn btn-danger scrolltop">
+    <i class="fa fa-angle-up"></i>
+    <div class="bg-caver-scroll"></div>
+  </div>
+
+  <CFooter></CFooter>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script setup>
+import CHeader from "./components/CHeader.vue";
+import CFooter from "./components/CFooter.vue";
+</script>
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<style></style>
